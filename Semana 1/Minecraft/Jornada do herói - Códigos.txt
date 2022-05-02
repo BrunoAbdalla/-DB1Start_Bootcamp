@@ -1,0 +1,276 @@
+Jornada do herói
+
+Fase 1:
+
+moveForward();
+
+Fase 2:
+
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+
+Fase 3: 
+
+for (var count = 0; count < 4; count++) {
+  moveForward();
+}
+
+Fase 4: 
+
+for (var count = 0; count < 7; count++) {
+  moveForward();
+}
+
+Fase 5:
+
+DIAMANTE:
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+turnRight();
+for (var count2 = 0; count2 < 4; count2++) {
+  moveForward();
+}
+turnLeft();
+for (var count3 = 0; count3 < 2; count3++) {
+  moveForward();
+}
+
+NORMAL:
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+turnRight();
+for (var count2 = 0; count2 < 2; count2++) {
+  moveForward();
+}
+
+Fase 6:
+
+NORMAL:
+for (var count = 0; count < 3; count++) {
+  moveForward();
+  placeBlock("planksOak");
+}
+
+DIAMANTE:
+turnRight();
+for (var count = 0; count < 3; count++) {
+  moveForward();
+}
+turnLeft();
+for (var count2 = 0; count2 < 3; count2++) {
+  placeBlock("planksOak");
+  moveForward();
+}
+turnLeft();
+for (var count3 = 0; count3 < 2; count3++) {
+  moveForward();
+  placeBlock("planksOak");
+}
+
+Fase 7:
+
+NORMAL:
+for (var count = 0; count < 5; count++) {
+  moveForward();
+  placeBlock("planksOak");
+}
+
+DIAMANTE:
+for (var count = 0; count < 2; count++) {
+  moveForward();
+  placeBlock("planksOak");
+}
+turnRight();
+moveForward();
+placeBlock("planksOak");
+turnLeft();
+for (var count2 = 0; count2 < 3; count2++) {
+  moveForward();
+  placeBlock("planksOak");
+}
+
+Fase 8: 
+
+NORMAL:
+function construir_ponte() {
+  moveForward();
+  placeBlock("planksOak");
+  moveForward();
+  placeBlock("planksOak");
+  moveForward();
+  moveForward();
+  turnRight();
+}
+
+construir_ponte();
+construir_ponte();
+
+DIAMANTE:
+function construir_ponte() {
+  moveForward();
+  placeBlock("planksOak");
+  moveForward();
+  placeBlock("planksOak");
+  moveForward();
+  moveForward();
+  turnRight();
+}
+
+construir_ponte();
+construir_ponte();
+construir_ponte();
+
+Fase 9:
+
+NORMAL:
+function limpar_o_caminho() {
+  destroyBlock();
+  moveForward();
+  placeBlock("gravel");
+}
+
+limpar_o_caminho();
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+limpar_o_caminho();
+moveForward();
+limpar_o_caminho();
+
+DIAMANTE:
+function limpar_o_caminho() {
+  destroyBlock();
+  moveForward();
+  placeBlock("gravel");
+}
+
+limpar_o_caminho();
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+limpar_o_caminho();
+moveForward();
+limpar_o_caminho();
+turnRight();
+limpar_o_caminho();
+for (var count2 = 0; count2 < 2; count2++) {
+  moveForward();
+}
+limpar_o_caminho();
+
+Fase 10:
+
+NORMAL:
+function consertar_caminho_longo() {
+  for (var count3 = 0; count3 < 3; count3++) {
+      destroyBlock();
+    moveForward();
+    placeBlock("rails");
+  }
+}
+
+function consertar_caminho_curto() {
+  for (var count4 = 0; count4 < 2; count4++) {
+      destroyBlock();
+    moveForward();
+    placeBlock("rails");
+  }
+}
+
+turnLeft();
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+consertar_caminho_curto();
+turnRight();
+for (var count2 = 0; count2 < 2; count2++) {
+  moveForward();
+}
+consertar_caminho_longo();
+
+DIAMANTE:
+function consertar_caminho_longo() {
+  for (var count3 = 0; count3 < 3; count3++) {
+      destroyBlock();
+    moveForward();
+    placeBlock("rails");
+  }
+}
+
+function consertar_caminho_curto() {
+  for (var count4 = 0; count4 < 2; count4++) {
+      destroyBlock();
+    moveForward();
+    placeBlock("rails");
+  }
+}
+
+turnRight();
+for (var count = 0; count < 3; count++) {
+  moveForward();
+}
+consertar_caminho_curto();
+turnLeft();
+consertar_caminho_longo();
+turnLeft();
+for (var count2 = 0; count2 < 2; count2++) {
+  moveForward();
+}
+turnRight();
+consertar_caminho_curto();
+
+Fase 11:
+
+NORMAL:
+function construir_ponte_pequena() {
+  for (var count = 0; count < 2; count++) {
+      moveForward();
+    placeBlock("netherrack");
+  }
+}
+
+function construir_ponte_longa() {
+  for (var count2 = 0; count2 < 5; count2++) {
+      moveForward();
+    placeBlock("netherrack");
+  }
+}
+
+construir_ponte_pequena();
+destroyBlock();
+moveForward();
+construir_ponte_longa();
+
+DIAMANTE:
+function construir_ponte_pequena() {
+  for (var count = 0; count < 2; count++) {
+      moveForward();
+    placeBlock("netherrack");
+  }
+}
+
+function construir_ponte_longa() {
+  for (var count2 = 0; count2 < 5; count2++) {
+      moveForward();
+    placeBlock("netherrack");
+  }
+}
+
+construir_ponte_pequena();
+destroyBlock();
+moveForward();
+construir_ponte_pequena();
+turnRight();
+moveForward();
+placeBlock("netherrack");
+destroyBlock();
+moveForward();
+moveForward();
+placeBlock("netherrack");
+turnLeft();
+construir_ponte_pequena();
+
+

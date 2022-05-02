@@ -1,0 +1,100 @@
+Viagem aquática
+
+Fase 1: 
+
+moveForward();
+moveForward();
+
+Fase 2: 
+
+moveForward();
+turn("right");
+moveForward();
+moveForward();
+
+Fase 3: 
+
+moveForward();
+moveForward();
+moveForward();
+moveForward();
+moveForward();
+moveForward();
+moveForward();
+
+Fase 4: 
+
+repeatUntilGoal(function () {
+  moveForward();
+});
+
+
+Fase 5:
+
+repeatUntilGoal(function () {
+  turn("right");
+  moveForward();
+  moveForward();
+});
+
+Fase 6:
+
+repeatUntilGoal(function () {
+  for (var count = 0; count < 3; count++) {
+      moveForward();
+  }
+  turn("right");
+  for (var count2 = 0; count2 < 3; count2++) {
+      moveForward();
+  }
+  turn("left");
+});
+
+Fase 7:
+
+repeatUntilGoal(function () {
+  moveForward();
+  ifPath('right', function () {
+    turn("right");
+  });
+});
+
+Fase 8:
+
+repeatUntilGoal(function () {
+  moveForward();
+  ifPath('right', function () {
+    turn("right");
+  });
+});
+
+Fase 9:
+
+repeatUntilGoal(function () {
+  moveForward();
+  ifStandingOn('blueCoralBlock', function () {
+    turn("right");
+  });
+  ifStandingOn('redCoralBlock', function () {
+    turn("left");
+  });
+});
+
+Fase 10:
+
+repeatUntilGoal(function () {
+  ifStandingOn('seaLantern', function () {
+    turn("right");
+  });
+  moveForward();
+});
+
+Fase 11:
+
+repeatUntilConduit(function () {
+  moveForward();
+  placePrismarine();
+  ifStandingOnLimit('seaLantern', function () {
+    turn("right");
+  });
+});

@@ -1,0 +1,162 @@
+Aventureiro de Minecraft:
+
+Fase 1:
+
+moveForward();
+moveForward();
+
+Fase 2: 
+
+moveForward();
+moveForward();
+destroyBlock();
+
+Fase 3: 
+
+moveForward();
+moveForward();
+shear();
+turnRight();
+moveForward();
+shear();
+
+Fase 4:
+
+moveForward();
+moveForward();
+moveForward();
+destroyBlock();
+turnLeft();
+moveForward();
+moveForward();
+moveForward();
+destroyBlock();
+turnLeft();
+moveForward();
+moveForward();
+moveForward();
+destroyBlock();
+
+Fase 5: 
+
+for (var count = 0; count < 4; count++) {
+  placeBlock("planksBirch");
+  moveForward();
+}
+
+Fase 6:
+
+DIFÍCIL:
+for (var count = 0; count < 2; count++) {
+  moveForward();
+  placeBlock("planksBirch");
+}
+turnLeft();
+moveForward();
+placeBlock("planksBirch");
+turnRight();
+for (var count2 = 0; count2 < 2; count2++) {
+  moveForward();
+  placeBlock("planksBirch");
+}
+turnRight();
+for (var count3 = 0; count3 < 3; count3++) {
+  moveForward();
+  placeBlock("planksBirch");
+}
+moveForward();
+turnRight();
+for (var count4 = 0; count4 < 3; count4++) {
+  moveForward();
+  placeBlock("planksBirch");
+}
+
+Fase 7:
+
+for (var count = 0; count < 6; count++) {
+  plantCrop();
+  moveForward();
+}
+turnRight();
+for (var count2 = 0; count2 < 2; count2++) {
+  moveForward();
+}
+turnRight();
+for (var count3 = 0; count3 < 6; count3++) {
+  moveForward();
+  plantCrop();
+}
+
+Fase 8:
+
+for (var count2 = 0; count2 < 2; count2++) {
+  for (var count = 0; count < 4; count++) {
+      moveForward();
+  }
+  turnLeft();
+}
+for (var count3 = 0; count3 < 2; count3++) {
+  moveForward();
+}
+
+Fase 9: 
+
+turnLeft();
+for (var count = 0; count < 2; count++) {
+  destroyBlock();
+  placeTorch();
+  moveForward();
+}
+
+Fase 10:
+
+moveForward();
+placeBlockAhead("cobblestone");
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+for (var count2 = 0; count2 < 2; count2++) {
+  destroyBlock();
+  moveForward();
+}
+
+Fase 11:
+
+for (var count = 0; count < 7; count++) {
+  destroyBlock();
+  ifLavaAhead(function() {
+    placeBlockAhead("cobblestone");
+  });
+  moveForward();
+}
+
+Fase 12:
+
+for (var count = 0; count < 2; count++) {
+  moveForward();
+}
+destroyBlock();
+ifLavaAhead(function() {
+  placeBlockAhead("cobblestone");
+});
+moveForward();
+turnRight();
+destroyBlock();
+for (var count2 = 0; count2 < 2; count2++) {
+  turnLeft();
+}
+for (var count3 = 0; count3 < 2; count3++) {
+  moveForward();
+}
+destroyBlock();
+
+Fase 13:
+
+placeBlock("rail");
+for (var count2 = 0; count2 < 2; count2++) {
+  turnRight();
+  for (var count = 0; count < 6; count++) {
+      moveForward();
+    placeBlock("rail");
+  }
+}
