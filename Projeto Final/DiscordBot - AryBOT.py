@@ -1,3 +1,5 @@
+#DiscordBot desenvolvido como desafio final do programa DB1 Start, esse bot conta uma piada sempre que chamado pelo comando !piada.
+
 #Importando as bibliotecas necessárias para o projeto
 import discord
 import requests
